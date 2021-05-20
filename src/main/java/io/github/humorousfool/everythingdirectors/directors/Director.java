@@ -20,7 +20,6 @@ public abstract class Director implements Listener
     protected String signName;
     protected String permissionName;
     protected String title;
-    protected final HashMap<Craft, Player> directing = new HashMap<>();
 
     protected Director(String title, String signName, String permissionName)
     {
@@ -59,14 +58,7 @@ public abstract class Director implements Listener
             }
 
             event.getPlayer().sendMessage("You are now directing the " + title + " of this craft.");
-            if(directing.containsKey(c))
-            {
-                directing.replace(c, event.getPlayer());
-            }
-            else
-            {
-                directing.put(c, event.getPlayer());
-            }
+            DirectorManager.setDirector(c, event.getPlayer(), permissionName);
         }
     }
 

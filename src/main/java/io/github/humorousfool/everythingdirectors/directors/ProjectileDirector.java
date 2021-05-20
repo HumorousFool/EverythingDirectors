@@ -8,6 +8,7 @@ import org.bukkit.FluidCollisionMode;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Firework;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Projectile;
 import org.bukkit.event.EventHandler;
@@ -47,8 +48,7 @@ public class ProjectileDirector extends Director
         }
         if(c == null) return;
 
-        if(!directing.containsKey(c)) return;
-        Player player = directing.get(c);
+        Player player = DirectorManager.getDirector(c, permissionName);
         if(player == null || !player.isOnline()) return;
 
         Projectile projectile = event.getEntity();

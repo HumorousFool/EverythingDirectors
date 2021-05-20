@@ -17,7 +17,6 @@ public final class EverythingDirectors extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new ProjectileDirector("arrows", "Arrow Director", "arrow", EntityType.ARROW, EntityType.SPECTRAL_ARROW), this);
         getServer().getPluginManager().registerEvents(new ProjectileDirector("eggs", "Egg Director", "egg", EntityType.EGG), this);
         getServer().getPluginManager().registerEvents(new ProjectileDirector("snowballs", "Snowball Director", "snowball", EntityType.SNOWBALL), this);
-        getServer().getPluginManager().registerEvents(new ProjectileDirector("fireworks", "Firework Director", "firework", EntityType.FIREWORK), this);
         getServer().getPluginManager().registerEvents(new ProjectileDirector("potions", "Potion Director", "potion", EntityType.SPLASH_POTION, EntityType.THROWN_EXP_BOTTLE), this);
     }
 
