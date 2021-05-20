@@ -1,6 +1,5 @@
 package io.github.humorousfool.everythingdirectors.directors;
 
-import com.sun.istack.internal.Nullable;
 import net.countercraft.movecraft.craft.Craft;
 import org.bukkit.entity.Player;
 
@@ -11,7 +10,6 @@ public class DirectorManager
     private static final HashMap<Craft, Player> directors = new HashMap<>();
     private static final HashMap<Player, String> types = new HashMap<>();
 
-    @Nullable
     public static Player getDirector(Craft craft, String type)
     {
         if(directors.containsKey(craft))
