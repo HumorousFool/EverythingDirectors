@@ -45,8 +45,7 @@ public abstract class Director implements Listener
             }
             Craft c = null;
             for (Craft tcraft : CraftManager.getInstance().getCraftsInWorld(event.getClickedBlock().getWorld())) {
-                if (tcraft.getHitBox().contains(MathUtils.bukkit2MovecraftLoc(event.getClickedBlock().getLocation())) &&
-                        CraftManager.getInstance().getPlayerFromCraft(tcraft) != null) {
+                if (tcraft.getHitBox().contains(MathUtils.bukkit2MovecraftLoc(event.getClickedBlock().getLocation()))) {
                     c = tcraft;
                     break;
                 }

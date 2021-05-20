@@ -40,8 +40,7 @@ public class ProjectileDirector extends Director
 
         Craft c = null;
         for (Craft tcraft : CraftManager.getInstance().getCraftsInWorld(block.getWorld())) {
-            if (tcraft.getHitBox().contains(MathUtils.bukkit2MovecraftLoc(block.getLocation())) &&
-                    CraftManager.getInstance().getPlayerFromCraft(tcraft) != null) {
+            if (tcraft.getHitBox().contains(MathUtils.bukkit2MovecraftLoc(block.getLocation()))) {
                 c = tcraft;
                 break;
             }
