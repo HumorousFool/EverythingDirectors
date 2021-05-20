@@ -1,0 +1,9 @@
+name: EverythingDirectors
+version: ${project.version}
+main: io.github.humorousfool.everythingdirectors.EverythingDirectors
+api-version: 1.16
+prefix: EverythingDirectors
+depend: [Movecraft]
+authors: [HumorousFool]
+description: Adds all the directors
+website: https://humorousfool.github.io
